@@ -1,0 +1,98 @@
+<HTML>
+    <head>
+
+        <script>
+            
+
+            do{
+                var nom=prompt('Por favor digite su nombre (Primera letra o vocal en Mayuscula)');
+                var er13=/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+                var rta98=er13.test(nom);
+
+                if(rta98==false)
+                {
+                    alert('Por favor digite un campo valido sin numeros ni caracteres especiales');
+                }
+
+            }while(rta98==false)
+
+            document.write("<br>"+"NOMBRE:   "+nom+"<br>");
+            
+
+            //------division pedir numero
+
+            do{
+                var tel =prompt('Por favor digite su numero de telefono');
+                var er2=/^[\d]{7,}$/;
+                var rta67=er2.test(tel);
+
+                if(rta67==false)
+                {
+                    alert('Por favor digite solo numeros no texto ni caracteres especiales y que sea mayor de 7 digitos');
+                }
+            
+
+            }while(rta67==false)
+
+            document.write("<br>"+"TELEFONO  "+tel+"<br>");
+
+            //division pedir correo electronico y retornar que caracteres estan mal
+
+            do{
+                var cor =prompt('Digite por favor su correo electronico');
+                var er28= new RegExp("[A-Za-z0-9]+@[A-Za-z]+[.]{1}[A-Za-z]{2,}");
+                
+                rta1=er28.test(cor);
+
+                if(rta1==false)
+                {
+                    alert('Por favor digite un correo electronico valido con caracteres de la (a-z) y numeros del (0-9) que tenga un arroba, y no tenga dos puntos seguidos');
+                }
+
+                
+
+
+
+
+            }while(rta1==false)
+
+            cor = cor.toLowerCase();
+
+            document.write("<br>"+"CORREO  "+cor+"<br>");
+
+            //placa 
+
+            do{
+                var placa =prompt('Digite por favor su placa de carro (3 letras - 3 numeros)');
+                var er15 = new RegExp("^[A-Za-z]{3}\\-\\d{3}$");
+                
+                var rta34=er15.test(placa);
+                
+
+                if(rta34==false)
+                {
+                    alert('Por favor digite una placa de 3 letras, seguidamente un guion y por ultimo 3 numeros unicamente');
+                }
+
+            }while(rta34==false)
+
+            placa = placa.toUpperCase();
+
+            document.write("<br>"+"PLACA:  "+placa+"<br>");
+
+        </script>
+        </head>
+
+            <BODY>
+        
+        
+
+                    <h1>Bienvenido a mi prueba de expresiones regulares</h1>
+                    <br>
+
+                    
+                </br>
+                    <h3></h3>
+                </BODY>
+   
+</HTML>
